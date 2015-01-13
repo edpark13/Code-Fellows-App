@@ -1,0 +1,36 @@
+<html>
+	<head>
+		<title> Todo List </title>
+		<script type="text/javascript">
+			var clickedItem;
+		
+			function add() {
+				var list = document.getElementById("list");
+				var item = document.createElement("li");
+				item.id = "item";
+				var text = document.getElementById("text").value;
+				var node = document.createTextNode(text);
+				item.appendChild(node);
+				list.appendChild(item);
+				item.onmousedown = activate;
+				item.onmouseup = remove;
+			}
+			
+			function activate() {
+				clickedItem = this;
+			}
+			
+			function remove() {
+				var list = document.getElementById("list");
+				list.removeChild(clickedItem);
+			}
+		</script>
+	</head>
+	<body>
+		<h1> Todo List </h1>
+
+		<ul id="list"></ul>
+		<input id="text" type="text" value=""></input>
+		<input type="submit" id="button" value="Add" onclick="add()"></input>
+	</body>
+</html>

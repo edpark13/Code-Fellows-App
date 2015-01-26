@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+    <html>
+        <head>
+            
+        </head>
+        <body>
+            <h1>Contact List</h1>
+            {% if infos %}
+                <table>
+                     {% for info in infos %}
+                    <tr>
+                        <td>{{ info.first_name }}</td>
+                        <td>{{ info.last_name }}</td>
+                        <td>{{ info.email }}</td>
+                    </tr>
+                    {% endfor %}
+                </table>
+            {% else %}
+                <strong>There are no information present.</strong>
+            {% endif %}
+        </body>
+    </html>

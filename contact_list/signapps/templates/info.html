@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+    <html>
+        <head>
+            
+        </head>
+        <body>
+            <h1>Submit Information</h1>
+            <form method = 'POST' action = ''>
+                {% csrf_token %}
+                {{ form.as_p }}
+                <input type = 'submit'>
+            </form>
+            <a href = 'accounts'>Contact List</a>
+            <a href = 'admin'>To edit and remove list</a>
+        </body>
+    </html>
